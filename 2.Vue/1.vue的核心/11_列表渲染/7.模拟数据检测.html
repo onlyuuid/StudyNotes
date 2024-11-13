@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模拟vue检测对象改变的原理</title>
+</head>
+<body>
+    <script>
+        let data = {
+            name:"李四",
+            address:"七星关"
+        }
+        
+        //创建一个构造函数
+        let obs = new Observer(data);
+        console.log(obs);
+
+        const vm = {} //创建一个vm
+         vm._data = obs = data;
+
+        //vue检测对象属性的核心就是使用Observe函数对对象进行了加工处理
+        function Observer(obj){
+           let keys = Object.keys(obj) //返回一个包含对象属性的数组
+           console.log(obj)
+           console.log(keys)
+           keys.forEach((k)=>{
+                Object.defineProperty(this,k,{
+                    get(){
+                        return obj[k];
+                    },
+                    set(val){
+                        console.log('set被调用了...')
+                        obj[k] = val
+                    }
+                })
+           })
+        }
+        //    上面Observer函数的不足: 
+        //        尽管看上去能够像vue一样检测对象属性的改变, 但只能检测一层, 
+        //        另外只能检测对象, 不能检测数组(即: 对于数组中的对象属性不能提供get和set方法)
+
+    </script>
+</body>
+</html>

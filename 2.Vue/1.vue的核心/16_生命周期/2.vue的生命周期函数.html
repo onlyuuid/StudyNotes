@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 准备好一个容器 -->
+    <div id='app'>
+       <div>
+        {{a}}
+       </div>
+        <button @click="a++ ">点我a+1</button>
+        <button @click="destroy">点我销毁vue</button>
+    </div>   
+</body>
+<script>
+    Vue.config.productionTip = false;
+    //创建Vue实例
+    const vm = new Vue({
+        el:'#app',
+        data() { 
+            return {
+                a:1
+            }
+        },
+        methods: {
+            destroy(){
+                //销毁vue
+               this.$destroy(); 
+            }
+        },
+        //1.初始化: 数据检测,数据代理创建之前调用,此时还不能通过vm获取到_data及其data中的数据
+        beforeCreate() {
+            console.log("beforeCreate执行了...")
+            // console.log(this) //this指向vm
+            // debugger;
+        },
+        //2.初始化: 数据检测,数据代理创建之后调用,此时可以通过this获取到_data及其data中的数据
+        created() {
+            console.log("created执行了...")
+            // console.log(this);
+            // debugger;
+        },
+        //3.挂载之前: 将指定容器挂载到vue之前调用
+        beforeMount() {
+            console.log("beforeMount执行了...")
+            let d = document.querySelector("#app")
+            // console.log(d instanceof HTMLElement)
+            // debugger;
+        },
+        //4.挂载之后: 将指定容器挂载到vue之后调用(常用: 通常在此时发送ajax请求, 发布订阅等)
+        mounted() {
+            console.log("mounted执行了...")
+        },
+        //5.更新之前: 模板更新之前调用(数据已经更新,只是还响应写到页面)
+        beforeUpdate() {
+            console.log("beforeUpdate执行了")
+            // debugger;
+        },
+        //6.更新之后: 模板更新之后调用(数据已经更新,且已覆写到页面)
+        updated() {
+            console.log("updated执行了...")
+            // debugger;
+        },
+        //7.销毁之前:调用$destroy方法后,vm进入销毁阶段
+        //此时beforeDestroy函数开始执行, 如果这时更新数据,不再响应到页面
+        //(vm销毁之前调用 常用:通常在此时取消订阅,), 
+        beforeDestroy() {
+            console.log("beforeDestroy执行了...")
+            // debugger;
+        },
+        // 8.销毁之后: 调用$destroy方法后,vm进入销毁阶段,vm销毁完成后调用destroyed函数,
+        // 页面显示vue的最终工作成果, vue从此下线(不再参与工作)
+        destroyed() {
+            console.log("destroyed执行了...")
+        },
+
+
+    })
+</script>
+</html>

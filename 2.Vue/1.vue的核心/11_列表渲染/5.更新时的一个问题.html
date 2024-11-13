@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新时的一个问题</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="updatezs">点我修改张三信息</button>
+        <ul v-for="p of persons" ::key="p.id">
+            <li>
+                {{p.id}}-{{p.name}}-{{p.age}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        const vm = new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    persons:[
+                        {id:'001',name:'张三',age:19},
+                        {id:'002',name:'李四',age:20},
+                        {id:'003',name:'王五',age:21},
+                        {id:'004',name:'老六',age:22},
+                    ]
+                }
+            },
+            methods: {
+                updatezs(){
+                    // this.persons[0].age = 40;       //奏效
+                    // this.persons[0].name = '马老师';//奏效 
+                    this.persons[0] = {id:"001",name:"马老师",age:"40"}
+                }
+            },
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 
+            几个注意的点:
+                1.关于组件名称:
+                    一个单词组成:
+                        第一种写法(首字母小写): school
+                        第二种写法(首字母大写): School
+                    多个单词组成:
+                        第一种写法(kebab-case命名): my-school
+                        第二种写法(CamelCase命名):  MySchool(需要脚手架的支持)
+                    备注:
+                        (1).组件名尽可能回避HTML中已有的元素名称, 例如:  h2 和 H2都不行
+                        (2).可以使用name配置项指定组件在开发者工具中呈现的名字
+                2.关于组件标签:
+                    第一种写法: <school></school>
+                    第二种写法: <school/>
+                    备注: 不使用脚手架时,<school/>会导致后续组件不能渲染
+
+                3.一个简写方式:
+                    const school = Vue.extend(options) 可简写为: const school = options
+     -->
+    <!-- 准备好一个容器 -->
+    <div id='app'>
+        <School></School>
+        <!-- 注意点二: 除了使用上面的方式, 还可以使用下面单标签自闭合的方式使用组件,
+             但是这种方式在非脚手架环境下,后面复用的组件都不能使用 -->
+        <!-- <school/>
+        <school/>
+        <school/> -->
+    </div>
+</body>
+<script>
+
+    //1.定义school组件
+    //注意点三: 在创建组件的时候, Vue.extend可以不写, 直接写配置项, 但Vue自己调用Vue.extend
+    const school = {
+        //定义组件名   vue的开发者工具会以这里定义的为准  
+        name:'School',  //注意点一: 在定义组件名的时候:
+                        //如果是一个单词且全小写的话,Vue的开发者工具会自动将单词的首字母改为大写
+                        //使用多个单词给组件命名时, 使用短横线(-)隔开
+        template:`                   
+            <h2>
+                <div>学校名字:{{name}}</div>
+                <div>学校地址:{{address}}</div>
+            </h2>
+        `,
+        data() {
+            return {
+                name:"xxx希望小学",
+                address:"正华大道"
+            }
+        },
+    }
+
+    //创建Vue实例
+    new Vue({
+        el:'#app',
+        data() { 
+            return {
+            }
+        },
+        //注册组件(局部)
+        components:{
+            school //vue会在这判断你有没有写Vue.extend,没有就自己调,有就直接将options拿来
+        }
+    })
+</script>
+</html>

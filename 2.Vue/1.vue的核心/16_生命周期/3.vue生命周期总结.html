@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 准备好一个容器 -->
+    <div id='app'>
+      <h1 :style="{opacity:opacity}">hello vue</h1>
+      <!-- <button @click="del">点我停止变化(消除定时器)</button>不能完全停止<br> -->
+      <button @click="del2">点我停止变化(消除vm)</button>可以完全停止
+    </div>
+</body>
+<script>
+    //创建Vue实例
+    const vm = new Vue({
+        el:'#app',
+        data() { 
+            return {
+                opacity: 1 
+            }
+        },
+        methods: {
+            del2(){
+                this.$destroy(); //消除vm
+            }
+        },
+        mounted() {
+            this.timer = setInterval(()=>{  //将定时器指定到vm的timer属性上
+                console.log("定时器被调用了...")
+                this.opacity -= 0.01
+                if(this.opacity <= 0) this.opacity = 1  
+            },20);
+        },
+        beforeDestroy() {
+            //消除vm之前关闭定时器
+            clearInterval(this.timer) //在此消除定时的好处是, vm的销毁可能是自杀,
+                                      //也可能是他杀, 但都可以在消除vm之前关闭定时器
+        },
+
+    })
+</script>
+</html>

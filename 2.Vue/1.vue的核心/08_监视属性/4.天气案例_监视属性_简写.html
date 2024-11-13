@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气案例_监视属性_深度监视</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="res++">点我+1</button><br>
+        res的值是:{{res}}
+    </div>
+    <script>
+ 
+        const vm = new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    res: 1,
+                }
+            },
+            //正常写法
+            // watch:{
+            //     res:{
+            //         immediate:true, // 初始化时handler被调用一次
+            //         deep:true, //开启深度监视
+            //         handler(){
+            //             console.log('res发生了改变...')
+            //         }
+            //     }
+            // },
+            // 简写: 使用简写形式只能有handler, 不能有其他配置项
+            // watch:{
+            //     res(){
+            //         console.log('res发生了改变...')
+            //     }
+            // }
+
+        })
+        //正常写法
+        // vm.$watch('res',{
+        //     immediate:true, // 初始化时handler被调用一次
+        //     deep:true, //开启深度监视
+        //     handler(){
+        //         console.log('res发生了改变...')
+        //     }
+        // })
+        //简写: 使用简写形式只能有handler, 不能有其他配置项
+        vm.$watch('res',function(){   //注意:函数不能写成箭头函数, 不然this就不再指向vm了
+            console.log('res发生了改变...')
+        })
+        console.log(vm)
+    </script>
+    
+</body>
+</html>

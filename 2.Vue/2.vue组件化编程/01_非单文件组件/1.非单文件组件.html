@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 
+            非单文件组件： 一个文件中有多个组件（2个及2个以上）
+              单文件组件： 一个文件中只有一个组件， Vue给这种文件定义了特殊的文件后缀 .vue(开发中常用)
+     -->
+     <!-- 
+            Vue中使用组件的三大步骤:
+                1.定义组件(创建组件)
+                2.注册组件
+                3.使用组件(写组件标签)
+            
+            一.如何定义一个组件?
+                使用Vue.extend(options)创建, 其中options和new Vue(options)时传入的options几乎一样,但也有点区别:
+                区别如下:
+                    1.el不要写, 为什么? ---最终所有的组件都要经过一个vm的管理, 由vm中的el决定服务哪个容器
+                    2.data必须写成函数, 为什么? ---避免组件被复用时, 数据存在引用关系
+                备注: 使用template可以配置组件结构
+
+            二.如何注册组件?
+                1.局部注册: 靠new Vue()的时候传入components选项
+                2.全局注册: 靠Vue.component('组件名',组件)
+            
+            三.编写组件标签:
+                <school><school>
+      -->
+    <!-- 准备好一个容器 -->
+    <div id='app'>
+        <!-- 第三步: 引用组件-->
+        <student></student>
+        <hr>
+        <!-- 组件复用 -->
+        <student></student>
+        <hr>
+        <principal></principal>
+        <des></des>
+    </div><hr>
+    <div id="app2">
+        <student></student>
+        <des></des>
+    </div>
+</body>
+<script>
+    //第一步: 定义组件
+    // 定义student组件
+    const student =  Vue.extend({
+        template:`
+            <h2>
+                <div>学生名字:{{name}}</div>
+                <div>学生地址:{{address}}</div>
+                <button @click="hint">点我提示学生地址</button>
+            </h2>
+        `,
+        data(){  //组件中的data必须写成函数式
+            return {
+               name:'张三',
+               address:'汤臣一品1号'
+            }
+        },
+        methods: {
+            hint(){
+                alert(this.address)
+                console.log(this) 
+            }
+        },
+    })
+    
+    // 定义principal组件
+    const principal = Vue.extend({
+        template:`
+            <div>
+                <h2>
+                    <div>{{name}}</div>
+                    <div>{{address}}</div>
+                    <div>{{age}}</div>
+                </h2>
+            <button @click="age++">点我age+1</button>    
+            </div>
+        `,
+        data() {
+            return {
+                name: '李校长',
+                address:'青阳路4号',
+                age:39
+            };
+        },
+
+    })
+   
+    // 定义一个组件
+    const des = Vue.extend({
+        template:`
+            <h3>{{description}}</h3>
+        `,
+        data() {
+            return {
+                description:'你好啊!!!'
+            }
+        },
+    })
+
+    //第二步:全局注册  //组件名 组件
+    Vue.component('des',des)
+    
+    //创建Vue实例
+    new Vue({
+        el:'#app',
+        //2.注册组件(局部注册)
+        components:{
+            student,
+            principal
+        }
+    })
+
+    new Vue({
+        el:'#app2',
+        data() { 
+            return {
+            }
+        },
+        components:{
+            student
+        }
+    })
+</script>
+</html>

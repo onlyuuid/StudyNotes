@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <div id="app">
+        姓:<input type="text"  v-model="firstname"><br><br>
+        名:<input type="text" v-model="lastname"><br><br>
+        全名:<span>{{fullname}}</span>
+    </div>
+    <script>
+        /*
+            computed和watch之间的区别:
+                1.computed能完成的功能, watch都可以完成.
+                2.watch能够完成的功能,computed不一定能够完成. 例如: watch可以进行异步操作
+            两个重要的原则:
+                1.所有被vue所管理的函数, 最好写成普通函数, 这样this的指向才是vm 或 组件实例对象
+                2.所有不被vue所管理的函数(定时器的回调函数, ajax的回调函数, promise的回调函数等),
+                  最好写成箭头函数, 这样this的指向才是vm 或 组件实例对象
+        */
+        new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    firstname:'张',
+                    lastname:'三',
+                    fullname: '张-三'
+                }
+            },
+            watch:{ 
+                //当不知道应该使用什么形式时, 可以先使用简写形式, 如果不满足需求,再使用普通形式
+                firstname(val){
+                    this.fullname = val+'-'+this.lastname
+                },
+                lastname(val){
+                    this.fullname = this.firstname+'-'+val
+                }
+            }
+            //相对使用computed来说, 使用watch实现这个案例是要复杂了点, 
+            //但不能说computed比watch好, 它们没有可比性,各有各的特点
+        })
+    </script>
+</body>
+</html>

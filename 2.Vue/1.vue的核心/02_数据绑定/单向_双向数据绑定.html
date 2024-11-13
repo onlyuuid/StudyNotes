@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 引入下载到本地的CDN -->
+     <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 
+            在vue中的数据绑定有两种, 一种是单向的,用v-bind绑定, 一种是双向的用v-model绑定
+            注意: v-model指令只能用在表单类元素上,如: input, checkbox,select等元素上
+        -->
+        <!-- 普通写法 -->
+        <!-- 单向数据绑定:<input type="text" v-bind:value="name"><br/>
+        双向数据绑定:<input type="text" v-model:value="name"> -->
+        <!-- 简写 -->
+        单向数据绑定:<input type="text" :value="name"><br/>
+        双向数据绑定:<input type="text" v-model="name">
+    </div>
+    <script>
+        Vue.config.productionTip = false;  //关闭在运行时提示生产信息
+        new Vue({
+          el:'#app',
+          data:{
+            name: "尚硅谷"
+          }
+        })
+         
+        
+    </script>
+</body>
+</html>

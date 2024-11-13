@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <div id="app">
+        <h2>今天天气很{{info}}</h2>
+        <button @click="bool = !bool">点我</button>
+    </div>
+    <script>
+        /*
+                监视属性watch:
+                    1.当被监视的属性变化时, 回调函数自动调用, 进行相关操作
+                    2.监视的属性必须存在, 才能进行监视
+                    3.坚实的方法有两种:
+                        (1).new Vue()时传入watch配置
+                        (2).通过vm.$watch监视
+        */
+        const vm = new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    bool: true
+                }
+            },
+            computed:{
+                info(){
+                    return this.bool?'炎热':'凉爽'
+                }
+            },
+            //第一种写法:
+            // watch:{
+            //     info:{
+            //         immediate:true,  // 初始化时handler被调用一次
+            //         //当info属性发生改变时,handler函数被调用
+            //         handler(newValue,oldValue){  
+            //             console.log("info被修改了:"+newValue,oldValue)
+            //         }
+            //     }
+            // }
+        })
+            //第二种写法:
+            vm.$watch('info',{
+                handler(newValue,oldValue){  
+                        console.log("info被修改了:"+newValue,oldValue)
+                    }
+
+            })
+        console.log(vm)
+    </script>
+    
+</body>
+</html>

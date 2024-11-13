@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 
+        需求2:定义一个v-fbind指令,与v-bind功能类似, 但可以让其所绑定的input元素默认获取焦点 
+     -->
+     <!-- 
+            自定义指令总结:
+                一.定义语法:
+                    (1).局部指令:
+                        new Vue({                           new Vue({
+                            directives{指令名:配置对象} 或        directives{指令名:回调函数}
+                        })                                  })
+     
+                    (2).全局指令: 
+                        Vue.directive(指令名,配置对象/回调函数)
+
+                二.配置对象中常用的3个回调函数:
+                    (1).bind: 指令与元素成功绑定时调用
+                    (2).inserted: 指令所在的元素被插入到父节点时调用
+                    (3).update: 指令所在的模板更新时调用
+                
+                三.备注:
+                    1.指令定义时不加v-,但调用时要加v-
+                    2.指令要是多个单词构成, 要使用kebab-case(短横线隔开),不要使用camelCase(驼峰命名)
+     -->
+    <!-- 准备好一个容器 -->
+    <div id='app'>
+        <h3>
+            n的值为:<input type="text"  v-fbind="n">
+        </h3>
+        <button @click="n++">点我n+1</button>
+    </div>
+</body>
+<script>
+    //创建Vue实例
+    new Vue({
+        el:'#app',
+        data() { 
+            return {
+                n:1,
+            }
+        },
+        directives:{
+            fbind:{
+                // 只调用一次, 指令第一次绑定到元素时调用. 在这里可以进行一次性的初始化设置
+                bind (el, binding) {
+                    el.focus();
+                },
+                // 被绑定的元素插入父节点时调用(仅保证父节点存在, 但不一定保证已被插入文档中)
+                inserted (el, binding) {
+                    el.value = binding.value
+                    el.focus();
+                },
+                // 指令所在模板被重新解析时调用
+                update (el, binding) {
+                    el.value = binding.value
+                    el.focus();
+                },
+
+            }
+        }
+    })
+</script>
+</html>

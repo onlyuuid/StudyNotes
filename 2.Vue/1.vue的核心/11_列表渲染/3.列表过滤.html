@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表过滤</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <div id="app">
+        <h2>人员列表</h2>
+        <input type="text" v-model="update">
+        <ul>                                        <!--标识唯一li-->
+            <li v-for="(p,index) in filterPersons" :key="p.id">
+                {{p.name}}-{{p.age}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    update:'',
+                    persons:[
+                        {id:001,name:'张三',age:19},
+                        {id:002,name:'张兵',age:20},
+                        {id:003,name:'李天虎',age:21},
+                        {id:004,name:'王天龙',age:22},
+                    ],
+                    // filterPersons:[]
+                }
+            },
+            // watch实现列表过滤
+            //#region
+            // watch:{
+            //     update:{
+            //         immediate:true, //初始化时调用一次handler函数
+            //         handler(val){
+            //         this.filterPersons = this.persons.filter((p)=>{
+            //            return p.name.indexOf(val) !== -1
+            //         })
+            //     }
+            //     }
+            // },
+            //#endregion
+            
+            //computed实现列表过滤
+            computed:{
+                filterPersons(){
+                    return this.persons.filter((p)=>{
+                        return p.name.indexOf(this.update) !== -1
+                    })
+                }
+            }
+
+        })
+    </script>
+</body>
+</html>

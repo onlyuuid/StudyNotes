@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表排序</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="search">
+        <button @click="num = 2">年龄升序</button>
+        <button @click="num = 1">年龄降序</button>
+        <button @click="num = 0">原顺序</button><br>
+        <ul v-for="p in filPerson" :key="p.id">
+            <li>{{p.id}}-{{p.name}}-{{p.age}}</li>
+        </ul>
+
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    search:"",
+                    num:0,
+                    persons:[
+                        {id:'001',name:'张三',age:29},
+                        {id:'002',name:'张四',age:23},
+                        {id:'003',name:'王五',age:26},
+                        {id:'004',name:'老六',age:16},
+                    ]
+                }
+            },
+            computed:{
+                filPerson(){
+                    const arr = this.persons.filter((p)=>{
+                       return p.name.indexOf(this.search) != -1
+                    })
+                    if(this.num){ //sort函数改变原数组
+                        arr.sort((p1,p2)=>{
+                            return this.num == 2?p1.age-p2.age:p2.age-p1.age;
+                        })
+                    }
+                    return arr;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

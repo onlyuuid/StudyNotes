@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 
+            v-for指令
+                1.用于展示列表数据
+                2.语法: v-for="(value,index) in xxx" :key=yyy  key用于标识唯一标签元素
+                3.可以遍历: 数组,对象,字符串(用的少),指定次数(用的很少)
+     -->
+    <div id="app">
+        <!-- 1.遍历数组 -->
+        <h2>人员列表(遍历数组)</h2>
+        <ul>
+            <li v-for="(p,index) in personArr" :key="index"> <!--key用于标识唯一li,下同-->
+                {{p.name}}-{{p.age}}
+            </li>
+        </ul>
+        <!-- 2.遍历对象 -->
+        <h2>汽车信息(遍历对象)</h2>
+        <ul>
+            <li v-for="(c,key,index) in car" :key="key">
+                {{index}}-{{key}}-{{c}}
+            </li>
+        </ul>
+        <!-- 3.遍历字符串 -->
+        <h2>测试遍历字符串</h2>
+        <ul>
+            <li v-for="(c,index) in string" :key="index">
+                {{index}}-{{c}}
+            </li>
+        </ul>
+        <!-- 4.遍历指定次数 -->
+        <h2>测试遍历指定次数</h2>
+        <ul>
+            <li v-for="(c,index) in count" :key="index">
+                {{index}}-{{c}}
+            </li>
+        </ul>
+
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    personArr:[
+                        {id:'001',name:'张三',age:19},
+                        {id:'002',name:'李四',age:20},
+                        {id:'003',name:'王五',age:21},
+                    ],
+                    car:{
+                        type:'宝马m5',
+                        carNum:'29328',
+                        color:'blue'
+                    },
+                    string:'hellovue',
+                    count:5
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>

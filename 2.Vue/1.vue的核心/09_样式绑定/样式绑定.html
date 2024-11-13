@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src='../js/vue.js'></script>
+     <style>
+        .pub{
+            background-color: aquamarine;
+            width: 300px;
+            height: 200px;
+        }
+        .border{
+            border: 1px solid red;
+            color: rgb(135, 104, 211);
+        }
+        .happy{
+            background-color: rgb(232, 214, 107);
+        }
+        .sorrow{
+            background-color: rgb(132, 144, 168);
+        }
+        .common{
+            background-color: rgb(120, 193, 238);
+        }
+        .atguigu1{
+            box-shadow: 0px 0px 10px 10px red;
+        }
+        .atguigu2{
+            border: 2px solid blue;
+        }
+        .atguigu3{
+            border-radius: 10px 10px 10px 10px;
+        }
+     </style>
+</head>
+<body>
+    <!-- 
+            绑定样式:
+                1.class样式
+                    写法 :class="xxx", xxx可以是字符串, 数组, 表达式, 对象
+                        字符串写法适用于: 类名不确定, 需要动态获取
+                        数组写法适用于: 绑定的样式个数为多个, 个数不确定, 名字也不确定
+                        对象写法适用于: 绑定的样式个数为多个, 个数确定, 名字也确定
+                2.style样式
+                    :style="{fontSize: xxx}" 其中xxx是动态值
+                    :style="[a,b]" 其中a,b是样式对象
+     -->
+    <div id="app">
+        
+        <!-- 方式一 绑定class样式 -->
+        <!-- 1.字符串写法, 适用于: 样式的类名不确定, 需要动态指定 -->
+        <h2 class="pub" :class="sty" @click="modify">hello world</h2> <!-- 最终效果 class="pub sty" -->
+        <!-- 2.数组写法, 适用于: 要绑定的样式个数不确定, 名字也不确定 -->
+        <div class="pub" :class="classArr">你好世界</div>
+        <!-- 3.对象写法, 适用于: 要绑定的样式个数确定, 名字也确定, 但要动态决定用不用  -->
+        <div class="pub" :class="classObj">你好世界2</div>
+
+         <!-- 方式二 绑定style样式 -->
+         <!-- 1.对象写法 -->
+         <div class="pub" :style="styObj">hello vue</div>
+         <!-- 2.数组写法 -->
+         <div class="pub" :style="styArr">你好 vue</div>
+    </div>
+    <script>
+       const vm = new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    sty:'happy',
+                    classArr:["atguigu1","atguigu2","atguigu3"],
+                    classObj:{
+                        atguigu1:true,
+                        atguigu2:false
+                    },
+                    styObj:{
+                        backgroundColor: 'red',
+                        fontSize: '30px'
+                    },
+                    styArr:[
+                        {
+                            backgroundColor: 'blue',
+                            fontSize: '40px'
+                        },
+                        {
+                            borderRadius: "10px 10px 10px 10px"
+                        }
+                    ]
+                }
+            },
+            methods: {
+                // 点击绑定元素随机切换颜色
+                modify(){
+                    let arr = ["happy","sorrow","common"]
+                    const index = Math.floor(Math.random()*3)   // 0 1 2
+                    this.sty = arr[index]
+                }
+            },
+        })
+    </script>
+</body>
+</html>

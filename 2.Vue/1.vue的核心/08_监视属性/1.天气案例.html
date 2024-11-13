@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <div id="app">
+        <h2>今天天气很{{info}}</h2>
+        <button @click="bool = !bool">点我</button>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    bool: true
+                }
+            },
+            computed:{
+                info(){
+                    return this.bool?'炎热':'凉爽'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

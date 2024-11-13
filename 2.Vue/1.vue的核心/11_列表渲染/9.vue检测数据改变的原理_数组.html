@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue检测数组的原理</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="s = 1">点我按照年龄降序</button>
+        <ul>
+            <li v-for="(f,index) of friends" :key="index">
+                {{f.name}}-{{f.age}}
+            </li>
+        </ul>
+        <h1>年龄信息
+        </h1>
+        <ul>
+            <li v-for="(f,index) of ages" :key="index">
+                {{f}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        /* vue将被侦听数组的更变方法进行了包裹,包括: 
+            push()    从末尾添加
+            pop()     从末尾删除
+            shift()   从头部删除
+            unshift() 从头部添加
+            splice()  替换字符串{()中有三个参数,分别为; 开始索引,删除的元素个数,新的元素}
+            sort()    排序
+            reverse() 逆转
+        
+        原理: 当被侦听的数组调用以上更变方法时, vue会重新解析模板,生成虚拟dom,
+              进行新旧dom比较,最后渲染到页面
+        */
+        const vm = new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    friends:[
+                        {name:'李四',age:49},
+                        {name:'王五',age:29},
+                        {name:'老六',age:39}
+                    ],
+                    ages:[
+                        12,31,3,13,29
+                    ]
+                
+                }
+            },
+           
+        })
+    </script>
+    
+</body>
+</html>

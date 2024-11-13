@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>自定义指令</title>
+    <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 准备好一个容器 -->
+    <!-- 
+            需求1:定义一个v-big指令,与v-text功能类似, 但会把绑定的数值放大10倍
+            需求2:定义一个v-fbind指令,与v-bind功能类似, 但可以让其所绑定的input元素默认获取焦点 
+     -->
+    <div id='app'>
+        <h2>当前的msg值是: <span v-text="msg"></span></h2>
+        <h2>放大10倍后的msg值是: <span v-big="msg"></span></h2>
+        <button @click="msg++">点我msg+1</button>
+    </div>
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false
+    //创建Vue实例
+    new Vue({
+        el:'#app',
+        data() { 
+            return {
+              msg:1,
+            }
+        },
+        directives:{
+            // big函数何时调用: 1.指令与元素成功绑定时(一上来),2.指令所在的模板被重新解析时调用
+            big(element,binding){
+                element.innerText = binding.value * 10
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 
+            条件渲染:
+                1.v-if
+                    写法:
+                        (1).v-if="表达式"
+                        (2).v-else-if="表达式"
+                        (3).v-else
+                    适用于: 切换频率较低的场景
+                    特点:   不展示的DOM元素直接移除
+                    注意:   v-if可以和 v-else-if,v-else一起使用, 但要求结构不能被"打断"
+                
+                2.v-show
+                    写法:v-show="表达式"
+                    适用于: 切换频率较高的场景
+                    特点: 不展示的DOM元素未被移除, 仅仅是使用样式隐藏掉
+                
+                3.备注: 使用v-if时,元素可能无法获取到, 而使用v-show一定可以获取到
+     -->
+    <div id="app">
+        <!-- 1.v-show="xxx" xxx是一个boolean值, 可以是直接的Boolean值, 也可以是间接的Boolean值-->
+        <div v-show="false"> <!--直接Boolean值-->
+            条件渲染 v-show
+        </div><br>
+        <div v-show="1 === 1"> <!--间接Boolean值-->
+            条件渲染 v-show
+        </div>
+        <!-- 2.v-if="xxx" xxx是一个boolean值, 可以是直接的Boolean值, 也可以是间接的Boolean值-->
+        <button @click="a++">点我+1</button>{{a}}
+        <div v-if="a == 1">1111</div>
+        <div v-else-if="a == 2">2222</div> 
+        <div v-else>哈哈</div>
+        <!-- 注意: 使用v-if时, 中间不能够被打断, v-if与v-else-if之间如果有其他标签元素,
+                   那么v-else-if将解析失败
+        -->
+
+        <!-- 需求: 使用条件渲染,当条件满足时在页面上同时显示1111,2222,哈哈 -->
+
+        <!-- 方式一:使用父标签包裹目标元素, 将条件放在父标签上 -->
+        <!-- (缺点: 父标签div是为了完成效果硬加的,破坏了原本的结构,不建议使用) -->
+        <button @click="b++">点我+1</button>{{b}}
+        <div v-if="b == 1">
+            <div>1111</div>
+            <div>2222</div> 
+            <div>哈哈</div>
+        </div>
+        <!-- 3.template(模板),不改变网页的结构, 推荐使用-->
+        <button @click="c++">点我+1</button>{{c}}
+        <template v-if="c == 1">
+            <div>1111</div>
+            <div>2222</div> 
+            <div>哈哈</div>
+        </template>
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    a:1,
+                    b:1,
+                    c:1
+                }
+            }
+        })
+    </script>
+</body>
+</html>

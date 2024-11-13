@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 
+            收集表单数据:
+                若: <input type="text"/>,则v-model收集的是value值, 用户输入的就是value值
+                若: <input type="radio"/>,则v-model收集的是value值, 且要给标签配置value属性
+                若: <input type="checkbox"/>,
+                    1.没有配置input的value,那么收集的是checked(勾 or 未勾,是boolean值)
+                    2.配置input的value属性:
+                        (1).v-model的初始值是非数组, 那么收集的是checked(勾 or 未勾,是boolean值)
+                        (2).v-model的初始值是数组, 那么收集的是value组成的数组
+                    备注: v-model的修饰符:
+                        lazy: 失去焦点后再收集数据
+                        number: 输入字符串转换为有效数字
+                        trim: 删除字符串前后的空格
+     -->
+    <div id="app">
+        <form action="">
+            账号1: <input type="text" v-model.lazy="account1" placeholder="失去焦点后再收集数据"><br><br>
+            账号2: <input type="number" v-model.number="account2" placeholder="将字符串转换为有效数字"><br><br>
+            账号3: <input type="text" v-model.trim="account3" placeholder="删除字符串前后的空格"><br><br>
+            密码: <input type="password" v-model="password"><br><br>
+            性别: 男<input type="radio" v-model="sex" value="男" name="sex"> 女<input type="radio" value="女" v-model="sex" name="sex"><br><br>
+            爱好: 学习<input  value="study" type="checkbox" v-model="habbys"> 打球<input type="checkbox" value="play" v-model="habbys">唱歌<input type="checkbox" value="sing" v-model="habbys"><br><br>
+            地址: <select v-model="adress">
+                    <option value="">请选择--</option>
+                    <option value="shanghai">上海</option>
+                    <option value="guiyang">贵阳</option>
+                    <option value="wuhan">武汉</option>
+                </select><br><br>
+            简介: <textarea v-model="about">
+
+                  </textarea><br><br>
+            <input type="checkbox" v-model="agreement">我已阅读并确认      
+        </form>
+
+    </div>
+    <script>
+        new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    account1:'',
+                    account2:'',
+                    account3:'',
+                    password:'',
+                    sex:'',
+                    habbys:[],
+                    adress:'',
+                    about:'',
+                    agreement:'',  
+                }
+            },
+        })
+    </script>
+    
+</body>
+</html>

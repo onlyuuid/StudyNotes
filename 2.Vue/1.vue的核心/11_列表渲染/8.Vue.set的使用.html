@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.set的使用</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <div id="app">
+        <h1>学校信息</h1>
+        <p>
+            {{sname}}<br>
+            {{saddress}}
+        </p>
+        <h1>学生信息</h1>
+        <button @click="addSex">点我添加sex属性</button>默认为男
+        <p>姓名:{{student.name}}</p>
+        <p>年龄:{{student.age}}</p>
+        <p v-show="student.sex">性别:{{student.sex}}</p>
+            
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        //Vue.set或vm.$set的使用: 用于添加当时没有写, 后面需要再写的属性, 添加的属性是响应式的
+        //Vue.set或vm.$set的使用局限:不能在vm或vm._data(根数据)中直接添加属性
+        const vm = new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    sname:'xxx学院',
+                    saddress: '东兰路1号',
+                    student:{name:'李四',age:19}
+                }
+            },
+            methods: {
+                addSex(){
+                    // Vue.set(this.student,'sex','男'); //方式一
+                    this.$set(this.student,'sex','男')   //方式二
+                }
+            },
+        })
+    </script>
+</body>
+</html>

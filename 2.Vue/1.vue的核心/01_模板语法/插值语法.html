@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入下载到本地的CDN -->
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 需要在页面显示的数据用双大括号 {{ }} 包裹起来, 这是vue特有的插值语法 -->
+        {{msg}}<br/>
+        <!-- {{ }} 中除了可以是属性以外, 还可以是表达式 -->
+        {{1+1}}<br/>
+        {{res?"今天天气晴":"今天要下雨"}}
+    </div>
+    <script>
+        Vue.config.productionTip = false
+        //创建vue实例
+        new Vue({
+            el: "#app",  //挂载应用
+            data() {
+                return {
+                    msg: "hello vue",
+                    res: true
+                }
+            },
+        })
+    </script>
+</body>
+</html>

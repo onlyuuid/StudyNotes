@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src='../js/vue.js'></script>
+     <style>
+        *{
+            margin: 10px;
+        }
+        .v1{
+            width: 300px;
+            padding: 10px;
+            background-color: aqua;
+        }
+        .v2{
+            width: 200px;
+            background-color: red;
+        }
+        .ul{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            overflow: auto;
+        }
+        li{
+            width: 100px;
+            height: 50px;
+            border: 1px  solid red;
+
+        }
+     </style>
+</head>
+<body>
+    <!-- 
+        事件修饰符:
+            1.prevent      阻止默认事件
+            2.stop         阻止事件冒泡
+            3.once         事件只触发一次
+            4.capture      使用事件的捕获模式
+            5.self         只有event.target是当前操作的元素才会触发
+            6.passive      事件的默认行为立即执行, 无需等待事件回调执行完毕
+     -->
+    <div id="app">
+        <!-- 阻止默认事件 -->
+        <a href="https://www.baidu.com" @click.prevent="showInfo">百度一下</a>
+        <!-- 阻止事件冒泡 -->
+        <div class="v1" @click="click"> 
+            v1
+            <a href="https://www.baidu.com" class="v2" @click.top.prevent="click">
+                v2    
+            </a>
+        </div>
+        <!-- 事件只触发一次 -->
+        <button @click.once="show1">click me</button>
+        <!-- 使用事件的捕获模式 -->
+        <div class="v1" @click.capture="showMsg(1)"> 
+            1
+            <div class="v2" @click="showMsg(2)">
+            2    
+            </div>
+        </div>
+        <!-- 只有event.target是当前操作的元素才会触发 -->
+        <div class="v1" @click.self="self"> 
+            1
+            <div class="v2" @click="self">
+            2    
+            </div>
+        </div>
+        <!-- 滚动事件: wheel 鼠标滚轮的滚动事件, passive被动执行, 无需等待回调执行完毕
+                      scroll 滚动条的滚动事件
+        -->
+        <!-- 事件的默认行为立即执行, 无需等待事件回调执行完毕 -->
+        <!-- <ul class="ul" @wheel.passive="ul"> -->
+        <ul class="ul" @scroll="ul">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+
+    </div>
+    <script>
+        new Vue({
+        el:'#app',
+            data() { 
+                return {
+
+                }
+            },
+            methods: {
+                showInfo(){
+                   alert("提示一下")
+                },
+                click(){
+                    alert("提示一下")
+                },
+                show1(){
+                    alert("我只显示这一次")
+                },
+                showMsg(v){
+                    console.log(v)
+                },
+                self(){
+                    alert("事件目标元素执行了")
+                },
+                ul(){
+                    for (let i = 0; i< 100000; i++) {
+                        console.log("@")
+                    }
+                    console.log("累坏了")
+                }
+            },
+            
+        })
+    </script>
+</body>
+</html>

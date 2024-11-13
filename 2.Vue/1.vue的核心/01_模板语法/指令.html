@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 引入下载到本地的CDN -->
+     <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 在vue中，以v-开头的都是指令，vue中的指令有很多，不同的指令有着不一样的用法和效果 -->
+        <!-- 1.html指令 v-html 该指令可以将html内容渲染到指定的容器内-->
+        <span v-html="tem">
+
+        </span>
+        <!-- 2.v-bind指令 该指令可以将标签属性绑定到一个data属性或表达式 -->
+        <span v-bind:title="title">
+
+        </span>
+        <!--  将title绑定到三元运算符 -->
+        <span v-bind:title="res?'111':'222'">
+
+        </span>
+         <!--  将title绑定到函数 -->
+         <span v-bind:title="func()">
+
+         </span>
+         
+
+    </div>
+    <script>
+        Vue.config.productionTip = false;
+        new Vue({
+            el:"#app",
+            data() {
+                return {
+                    tem: "<div>hello vue</div>",
+                    title: "v-bind指令",
+                    res: true
+                }
+            },
+            methods: {
+                func(){
+                    return "绑定到一个函数"
+                }
+            },
+    
+    })
+    </script>
+</body>
+</html>

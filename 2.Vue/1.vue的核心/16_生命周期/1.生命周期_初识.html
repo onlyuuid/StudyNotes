@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>生命周期</title>
+    <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 
+        生命周期是指生命周期函数,本质上是指vue执行到不同阶段时调用不同的函数  
+     -->
+    <!-- 准备好一个容器 -->
+    <div id='app'>
+        {{msg}}
+    </div>
+</body>
+<script>
+    //创建Vue实例
+    new Vue({
+        el:'#app',
+        data() { 
+            return {
+                msg:"我与旧事归于尽,来年依旧迎春风."
+            }
+        },
+        // 页面初次渲染完毕后调用, 这个阶段通常做发送ajax请求, 发布订阅等操作
+        mounted() { 
+            alert("vue渲染完成...")
+        },
+    })
+</script>
+</html>

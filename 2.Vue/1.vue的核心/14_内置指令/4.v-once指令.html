@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 
+            v-once指令:
+                1.v-once所在的节点在初次动态渲染后, 就视为静态内容了
+                2.以后数据的更新不会引起v-once所在结构的更新, 可以用于性能优化
+     -->
+    <!-- 准备好一个容器 -->
+    <div id='app'>
+        <button @click="a++">点我a+1</button>
+        <div v-once>初始值:{{a}}</div> 
+        <div>低增值:{{a}}</div>
+    </div>
+    <script>
+        //创建Vue实例
+        new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    a:1,
+                }
+            }
+        })
+    </script>
+</body>
+</html>

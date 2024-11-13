@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 准备好一个容器 -->
+    <div id='app'>
+        
+    </div>
+</body>
+<script>
+            /* 层级关系
+                    vm
+                      App
+                        School
+                            student
+                        Dog
+            */
+    // 定义student组件
+    const Student = {
+        name:'Student', //定义组件名
+        template:`
+            <h2>
+                <div>{{name}}</div>
+                <div>{{age}}</div>
+            </h2>
+        `,
+        data() {
+            return {
+                name: '张三',
+                age:19
+            }
+        },
+    }
+    // 定义dog组件
+    const Dog = {
+        name:'Dog', //定义组件名
+        template:`
+            <h2>
+                <div>{{name}}</div>
+            </h2>
+        `,
+        data() {
+            return {
+                name: '哈士奇',
+            }
+        },
+    }
+
+    //定义school组件
+    const School = {
+        name:'School', //定义组件名
+        template:`
+            <h2>
+                <div>{{name}}</div>
+                <div>{{address}}</div>
+                <Student></Student>
+            </h2>
+        `,
+        data() {
+            return {
+                name: 'xxx希望小学',
+                address:'正华大道'
+            }
+        },
+        //注册组件(局部)
+        components:{Student}
+    }
+
+    // 定义app组件(开发中常用app组件来作为根组件管理所有子组件)
+    const App = {
+        name:'App',
+        template:`
+            <!-- 使用组件 -->
+            <div>
+                <School></School>
+                <Dog></Dog>
+            </div>
+        `,
+        // 注册组件(局部)
+        components:{School,Dog}
+    }
+
+    //创建Vue实例
+    new Vue({
+        template:`<App></App>`, //使用组件
+        el:'#app',
+        data() { 
+            return {
+            }
+        },
+        // 注册组件(局部)
+        components:{
+            App
+        }
+    })
+</script>
+</html>

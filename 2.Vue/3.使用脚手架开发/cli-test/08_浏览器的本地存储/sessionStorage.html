@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sessionStorage</title>
+</head>
+<body>
+    <h2>sessionStorage</h2>
+    <button onclick="addData()">点我向浏览器存储数据</button>
+    <button onclick="getData()">点我从浏览器读取数据</button>
+    <button onclick="removeData()">点我从浏览器删除数据</button>
+    <button onclick="clearData()">点我从浏览器清空数据</button>
+    <script>
+        //存储在浏览器sessionStorage上的数据当用户关闭浏览器时数据就会被清除
+        //添加数据
+        function addData(){
+            //向sessionStorage中添加数据(数据最终会以xxx.tostring()的形式显示)
+            sessionStorage.setItem('phone',112233) //数子最终会转换成字符串形式存储
+            let obj = {name:'张三',age:18} 
+            //添加的是对象, 直接添加会显示[Object,Object],可以借助JSON.stringify解析
+            sessionStorage.setItem('name',JSON.stringify(obj))
+
+        }
+         //读取数据
+        function getData(){
+            console.log(sessionStorage.getItem('name'))
+        }
+
+        //删除数据
+        function removeData(){
+            sessionStorage.removeItem('name')
+        }
+        
+        //清空数据
+        function clearData(){
+            sessionStorage.clear()
+        }
+    </script>
+</body>
+</html>

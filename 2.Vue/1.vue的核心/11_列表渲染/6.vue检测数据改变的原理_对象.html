@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue检测数据改变的原理</title>
+     <script src='../js/vue.js'></script>
+</head>
+<body>
+    <!-- 
+        vue检测对象数据改变的原理:
+            一.vue为data中所管理的对象属性提供了get和set方法, 
+            当data中所管理的对象属性数据发生改变时:
+                1.set方法被调用 -> 2.从新解析模板生成虚拟dom -> 3.新旧dom对比 -> 4.更新页面
+            
+            二.get和set方法的调用时期:
+                get方法在显示对象属性的时候调用,set方法在对象属性被修改的时候调用
+               
+            -->
+    <div id="app">
+        <ul v-for="p in persons" ::key="p.id">
+            <li>
+                {{p.id}}-{{p.name}}-{{p.age}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        const vm = new Vue({
+            el:'#app',
+            data() { 
+                return {
+                    persons:[
+                        {id:'001',name:'张三',age:19},
+                        {id:'002',name:'李四',age:20},
+                        {id:'003',name:'王五',age:21},
+                        {id:'004',name:'老六',age:22}
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>
