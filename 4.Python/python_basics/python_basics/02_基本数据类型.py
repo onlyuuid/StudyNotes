@@ -83,15 +83,15 @@ b = False == 0
 c = True + 3
 d = False * 32
 
-print(result)
-print(a)
-print(b)
-print(c)
-print(d)
+print(result) # True
+print(a)      # True
+print(b)      # True
+print(c)      # 4
+print(d)      # 0
 #  Python2中没有bool类型, 它用数字0表示False, 用数子1表示True
 #  当你指定一个值时, Number对象就会被创建
 f = 10
-print("===============")
+print("===============2")
 # 你也可以使用del语句删除一些对象的引用
 v = 21
 j = "43"
@@ -99,7 +99,7 @@ l = "hello"
 del v
 # 删除多个对象
 del j,l
-# print(v)
+# print(v) NameError: name 'v' is not defined
 # print(j)
 # print(l)
 
@@ -144,9 +144,10 @@ print(y)
 """
 # Python还支持复数, 复数由实数部分和虚数部分构成, 可以用a + bj,或者complex(a,b)表示, 复数的实部a和虚部b都是浮点型
 jk = 32+2j
-ds = complex(43,7j)
-print(jk)
-print(ds)
+ds = complex(54,8)
+print(jk) # (32+2j)
+print(ds) # (54+8j)
+print('-------------22')
 
 # 6. String(字符串)
 r"""
@@ -469,7 +470,7 @@ dict_values(['runoob', 13])
 x = bytes("hello",encoding="utf-8")
 print("x = ",x)
 """
-    与字符串类型类似, bytes类型也支持许多操作和方法, 如切片, 拼接, 查找, 替换等等. 同时, 由于bytes类型是不可变的, 因此
+    与字符串类型类似, byte类型也支持许多操作和方法, 如切片, 拼接, 查找, 替换等等. 同时, 由于bytes类型是不可变的, 因此
     在进行修改操作时需要创建一个新的bytes对象. 例如:  
 """
 print("---------------")
@@ -482,6 +483,7 @@ print(z)  # 拼接操作 b'helloworld'
 # 需要注意的是, bytes类型中的元素是整数值, 因此在进行比较操作时需要使用相应的整数值, 例如:
 x =b'hello'
 if x[0] == ord('h'):
+    print(ord('h')) # 104
     print('The first element is "h"')
 # 其中ord()函数用于将字符串转为相应的整数值
 
@@ -506,19 +508,3 @@ if x[0] == ord('h'):
     hex(x)                  将一个整数转换为一个十六进制字符串
     oct(x)                  将一个整数转换为一个十八进制字符串
 """
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
