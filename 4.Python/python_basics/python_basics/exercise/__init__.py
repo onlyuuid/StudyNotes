@@ -256,6 +256,69 @@ list = get_random(numner)
 print(f"生成{numner}以内的随机数列表为:{list}")
 """
 
+"""
+实现一个简单的计算器（支持加减乘除）
+def compute_factorial(a,b,c):
+    if "+".__eq__(c):
+        return a + b
+    elif "-".__eq__(c):
+        return a - b
+    elif "*".__eq__(c):
+        return a * b
+    else:
+        return a / b
 
+print("请输入第一个数")
+frist = int(input())
+print("请输入第二个数")
+two = int(input())
+print("请输入运算符")
+char = str(input())
 
+result = compute_factorial(frist,two,char)
+print(f"计算结果为:{frist} {char} {two} = {result}")
+"""
 
+"""
+将列表去重（如[1,2,2,3]变为[1,2,3]）
+def de_weight(arr):
+    s = set(arr)
+    li = list(s)
+    print(f"去重结果为:{li}")
+
+li = [1,2,2,3]
+de_weight(li)
+去重结果为:[1, 2, 3]
+"""
+
+"""
+统计一段英文文本中每个单词的频率
+def word_of_letters(s):
+    s1 = str(s)
+    word = s1.split(" ")
+    d = dict()
+    for k in word:
+        d[k] = d.get(k, 0) + 1
+    return d
+
+s = "How are you you"
+d = word_of_letters(s)
+for k, v in d.items():
+    print(f"{k}: {v}")
+How: 1
+are: 1
+you: 2
+"""
+
+def word_of_letters(s):
+    s1 = str(s)
+    word = s1.split(" ")
+    d = dict()
+    for k in word:
+        d[k] = d.get(k, 0) + 1
+    return d
+
+s = "How are you you"
+d = word_of_letters(s)
+for k, v in d.items():
+    print(f"{k}: {v}")
