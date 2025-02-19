@@ -99,7 +99,7 @@ print(x.realpart, x.imagpart) # 1 2
 从执行结果可以看出, self代表的是类的实例, 代表当前对象的地址, 而self.class则指向类
 """
 """
-self不足python的关键字, 我们把它换成其他的,如hello也是可以正常执行的
+self不是python的关键字, 我们把它换成其他的,如hello也是可以正常执行的
 """
 class Test:
     def prt(hello):

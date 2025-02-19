@@ -170,7 +170,7 @@ try:
 except MyError as err:
     print("My exception occurred, value",err.value)
 
-# raise MyError("oops!")
+# My exception occurred, value 4
 """
 Traceback (most recent call last):
   File "D:\StudyNotes\4.Python\python_basics\python_basics\25_错误和异常.py", line 173, in <module>

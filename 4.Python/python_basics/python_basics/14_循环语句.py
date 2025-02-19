@@ -90,33 +90,7 @@ for i in range(len(arr)):
 list2 = list(range(6))
 print(list2)
 
-h = 6
-while h > 0:
-    h -= 1
-    if h == 3:
-        break
-    print(h)
-print("循环结束!")
 
-while h > 0:
-    h -= 1
-    if h == 3:
-        continue
-    print(h)
-print("循环结束")
-
-tup = ('Facebook','taobao','YouTube')
-for i in tup:
-    if len(i) == 6:
-        break
-    print(i)
-
-print("===================")
-
-for i in tup:
-    if len(i) == 6:
-        continue
-    print(i)
 
 #pass 语句不做任何事情, 一般用于做占位符
 # while True:

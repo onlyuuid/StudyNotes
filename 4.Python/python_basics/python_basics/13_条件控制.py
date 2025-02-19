@@ -45,16 +45,16 @@ print('=====================')
 #         print("你猜小了")
 
 # if 嵌套
-# list = [1, 2, 3, 4, 5]
-# a = int(input("请输入一个数:"))
-# if a in list:
-#     print(a,'在list中')
-#     if a % 2 == 0:
-#         print(a,"是一个偶数")
-#     else:
-#         print(a,"是一个奇数")
-# else:
-#     print(a,'不在list中')
+list = [1, 2, 3, 4, 5]
+a = int(input("请输入一个数:"))
+if a in list:
+    print(a,'在list中')
+    if a % 2 == 0:
+        print(a,"是一个偶数")
+    else:
+        print(a,"是一个奇数")
+else:
+    print(a,'不在list中')
 
 # match...case
 n = 5

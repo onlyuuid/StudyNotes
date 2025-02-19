@@ -44,10 +44,10 @@ class MyNumbers:
 myclass = MyNumbers()
 myiter = iter(myclass)
 
-print(next(myiter))
-print(next(myiter))
-print(next(myiter))
-print(next(myiter))
+print(next(myiter)) # 1
+print(next(myiter)) # 2
+print(next(myiter)) # 3
+print(next(myiter)) # 4
 
 # 4.StopIteration
 """
@@ -67,15 +67,9 @@ class MyNumbers2:
         else:
             raise StopIteration  # 停止迭代
         return x
-print("============================")
+print("============================1")
 a = MyNumbers2()
 it2 = iter(a)
-
-print(next(it2))
-print(next(it2))
-print(next(it2))
-print(next(it2))
-
 for i in it2:
     print(i)
 print("==========================")
@@ -97,7 +91,7 @@ print(next(generate))
 for i in generate:
     print(i)
 
-print("==========================")
+print("==========================3")
 # # 斐波那契数列
 def fibonacci(n):
     a,b,counter = 0,1,0

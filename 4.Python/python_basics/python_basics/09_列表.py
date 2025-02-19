@@ -7,8 +7,8 @@
 """
 # 访问列表中的值
 list = ['a', 'b', 'c']
-print(list[0])
-print(list[-1])
+print(list[0]) # a
+print(list[-1]) # c
 
 # 截取元素
 list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
@@ -16,13 +16,13 @@ print(list[1:5])
 print(list[1:-1])
 print(list[4:])
 print(list[:-3])
-
+print("=========")
 # 更新列表
 list2 = ['he','i','you']
 list2[0] = 'she'
 list2[-1] = 'your'
 print(list2)
-
+print("-----------")
 # 删除列表元素
 list3 = ['he','i','you']
 del list3[0]
@@ -41,7 +41,7 @@ list6 = [6,7,8,9]
 print(list5[:3])
 list5 += list6
 print(list5)
-
+print("***!----")
 # 嵌套列表
 a = ['a','b','c']
 b = ['d','e','f']
