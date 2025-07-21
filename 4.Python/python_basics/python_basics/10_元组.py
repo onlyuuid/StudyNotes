@@ -7,11 +7,12 @@
 tup1 = ('google','百度','阿里',12)
 tup2 = (1,2,3,4)
 tup3 = "hello","world"  # 不用括号也可以
-print(type(tup3))
+print(f"type3 = {type(tup3)}")
 
 # 定义一个空元组
 # 元组中只包含一个元素时, 需要在元素的后面添加逗号(,),否则括号会被当做运算符使用:
 tup5 = (3,)
+print(f"{tup5}")
 
 # 元组和字符串类似, 下标从0开始, 可以进行截取, 组合等.
 tup6 = ('google','百度','阿里',12,43)
@@ -23,7 +24,7 @@ print(tup6[1:-2])
 tup6 = (1,2)
 tup7 = (3,4)
 tup8 = tup6 + tup7
-print(tup8)
+print(f"tup8 = {tup8}") #
 
 # 删除元组
 # 元组中的值是不允许删除的, 但我们可以使用del语句删除整个元组
@@ -47,7 +48,7 @@ print('do' in e)  # True  元素是否存在
 
 f = (1,2,3,4,5,6)
 for i in f:
-    print(i)        # 迭代
+    print(i)
 
 # 元组索引, 截取
 tup = ('google','runoob','taobao','jingdong','weibo')

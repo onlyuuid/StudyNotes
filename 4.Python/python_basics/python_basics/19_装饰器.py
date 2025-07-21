@@ -16,11 +16,8 @@ Python还提供了一些内置的装饰器, 比如@staticmethod和@classmethod, 
 Python装饰器允许在不修改原有函数代码的基础上, 动态地增加或修改函数的功能, 
 装饰器本质上是一个接受函数作为输入并返回一个新的包装过后的函数对象.
 '''
-
-
 def before_call_code():
     print('before_call_code...')
-
 
 def after_call_code():
     print('after_call_code...')

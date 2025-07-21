@@ -13,9 +13,9 @@ if __name__ == '__main__':
     print("6.退出系统")
     print("==========================================")
     # 初始化列表, 用于存储数据
-    list = [{'name':'西游记','state':'已借出','borrow_time':'10天','return_time':'2024-10-10','borrow_count':2},
+    list = [{'name':'西游记','state':'已借出','borrow_time':'2024-05-12','return_time':'2024-10-10','borrow_count':2},
             {'name':'水浒传','state':'未借出','borrow_time':'暂无','return_time':'暂无时间','borrow_count':0},
-            {'name':'三国演义','state':'已借出','borrow_time':'12天','return_time':'2024-10-12','borrow_count':1}]
+            {'name':'三国演义','state':'已借出','borrow_time':'2024-06-12','return_time':'2024-10-12','borrow_count':1}]
     inp = 0
     while True:
         inp = int(input("请输入您要执行的指令序号: \n"))
@@ -35,6 +35,7 @@ if __name__ == '__main__':
                 newBook = {}
                 newBook['name'] = name
                 newBook['state'] = '未借出'
+                newBook['borrow_time'] = '暂无时间'
                 newBook['return_time'] = '暂无时间'
                 newBook['borrow_count'] = 0
                 list.append(newBook)
