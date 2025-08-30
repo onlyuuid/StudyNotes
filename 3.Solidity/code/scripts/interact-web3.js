@@ -26,7 +26,7 @@ async function main() {
 
   // 2. 调用 setMessage 修改状态（发起交易）
   console.log("开始调用 setMessage() 修改 message...");
-  const tx = await contract.methods.setGreeting("大魔王").send({
+  const tx = await contract.methods.setGreeting("西游记").send({
     from: account.address,
     gas: 100000,
   });
