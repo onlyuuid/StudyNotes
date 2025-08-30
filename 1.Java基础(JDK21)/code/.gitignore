@@ -2,6 +2,7 @@ target/
 aio_output/
 bio_output/
 nio_output/
+testdata/
 
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
