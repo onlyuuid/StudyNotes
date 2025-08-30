@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+
+</head>
+<body>
+    <div onclick="document.getElementById('upload').click()">上传文件</div>
+    <div onclick="download()">下载文件</div>
+    <input type="file" id="upload" style="display:none" onchange="handleFile(this)">
+    <script>
+        async  function handleFile(input) {
+            const file = input.files[0];
+            if(!file) return;
+            console.log(file)
+
+            let formData = new FormData()
+            formData.append("file",file)
+
+            try{
+                let resource = await fetch("http://localhost:8080/upload",{
+                    method: "POST",
+                    body: formData
+                })
+
+                let result = await resource.json()
+                console.log("上传成功",result)
+            }catch (error){
+                console.log(error)
+            }
+        }
+
+        async function download() {
+            try {
+                let response = await fetch("http://localhost:8080/download", {
+                    method: "GET"
+                });
+
+                if (!response.ok) throw new Error("下载失败");
+
+                // 获取文件名（可从响应头获取）
+                let filename = response.headers.get("Content-Disposition")
+                    ?.split("filename=")[1] || "download.mp3";
+
+                // 将响应转为 blob
+                let blob = await response.blob();
+                console.log('blob',blob)
+
+                // 创建临时链接触发下载
+                let link = document.createElement("a");
+                link.href = window.URL.createObjectURL(blob);
+                link.download = filename;
+                link.click();
+
+                // 释放 URL 对象
+                window.URL.revokeObjectURL(link.href);
+
+                console.log("下载完成");
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+    </script>
+</body>
+</html>

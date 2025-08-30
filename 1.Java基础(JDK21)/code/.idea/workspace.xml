@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d42384e9-2933-4aec-932f-12451eef1876" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/CodeSpringBootApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/文件上传和下载/FileUploadAndDownload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3.Solidity/code/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../3.Solidity/code/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3.Solidity/code/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../3.Solidity/code/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3.Solidity/code/scripts/interact-web3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../3.Solidity/code/scripts/interact-web3.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Record" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../../../Program Files/Java/graalvm-jdk-21.0.5+9.1/lib/src.zip!/java.base/java/lang/Object.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../Program Files/Java/graalvm-jdk-21.0.5+9.1/lib/src.zip!/java.base/java/time/Duration.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../Program Files/Java/graalvm-jdk-21.0.5+9.1/lib/src.zip!/java.base/java/time/LocalDateTime.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../Program Files/Java/graalvm-jdk-21.0.5+9.1/lib/src.zip!/java.base/java/time/MonthDay.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../Program Files/Java/graalvm-jdk-21.0.5+9.1/lib/src.zip!/java.base/java/time/chrono/ChronoPeriodImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../Program Files/Java/graalvm-jdk-21.0.5+9.1/lib/src.zip!/java.base/java/time/temporal/ChronoUnit.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../Program Files/Java/graalvm-jdk-21.0.5+9.1/lib/src.zip!/java.base/java/time/temporal/TemporalAccessor.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../../../Program Files/Java/graalvm-jdk-21.0.5+9.1/lib/src.zip!/java.base/java/time/temporal/TemporalAmount.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="D:\utils\apache-maven-3.9.6" />
+        <option name="localRepository" value="D:\utils\apache-maven-3.9.6\repository" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="useMavenConfig" value="false" />
+        <option name="userSettingsFile" value="D:\utils\apache-maven-3.9.6\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2mUynZcMLdfxLEchKPvD7J6Ms7a" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="flattenModules" value="true" />
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showScratchesAndConsoles" value="false" />
+    <option name="showVisibilityIcons" value="true" />
+    <option name="sortKey" value="BY_TIME_DESCENDING" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AioCopyTest.executor": "Run",
+    "Application.AioFileUpperCase.executor": "Run",
+    "Application.AssigningOperator.executor": "Run",
+    "Application.BioCopyTest.executor": "Run",
+    "Application.BitOperation.executor": "Run",
+    "Application.CharacterStreamExample.executor": "Run",
+    "Application.ClientSocket.executor": "Run",
+    "Application.ConditionalStatement.executor": "Run",
+    "Application.DateTimeMain.executor": "Run",
+    "Application.GenerateFiles.executor": "Run",
+    "Application.HelloWorld.executor": "Run",
+    "Application.LogicalOperator.executor": "Run",
+    "Application.LoopStatement.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Main02.executor": "Run",
+    "Application.Main2.executor": "Run",
+    "Application.Main3.executor": "Run",
+    "Application.MyServerSocket.executor": "Run",
+    "Application.NioCopyTest.executor": "Run",
+    "Application.NioFileUpperCase.executor": "Run",
+    "Application.Sender.executor": "Run",
+    "Application.TernaryOperator.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.com.g_网络编程.Main.executor": "Run",
+    "JUnit.DateTimeMain.test.executor": "Run",
+    "JUnit.DateTimeMain.test1.executor": "Run",
+    "JUnit.DateTimeMain.test2.executor": "Run",
+    "JUnit.DateTimeMain.test3.executor": "Run",
+    "JUnit.DateTimeMain.test4.executor": "Run",
+    "JUnit.DateTimeMain.test5.executor": "Run",
+    "JUnit.Test2.test1.executor": "Run",
+    "JUnit.Test2.test2.executor": "Run",
+    "JUnit.Test2.test3.executor": "Run",
+    "JUnit.Test2.test4.executor": "Run",
+    "JavaClassFindUsagesOptions.isSearchForTextOccurrences": "false",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.CodeSpringBootApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.preview.features.used": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\StudyNotes\1.Java基础(JDK21)\code" />
+      <recent name="D:\StudyNotes\1.Java基础(JDK21)\code\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.CodeSpringBootApplication">
+    <configuration name="ClientSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.tcp.ClientSocket" />
+      <module name="code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.g_网络编程.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.Main2" />
+      <module name="code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.g_网络编程.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.Main3" />
+      <module name="code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.g_网络编程.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyServerSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.tcp.MyServerSocket" />
+      <module name="code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.g_网络编程.tcp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CodeSpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="code" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.CodeSpringBootApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.CodeSpringBootApplication" />
+        <item itemvalue="Application.ClientSocket" />
+        <item itemvalue="Application.MyServerSocket" />
+        <item itemvalue="Application.Main3" />
+        <item itemvalue="Application.Main2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.27812.49" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.27812.49" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d42384e9-2933-4aec-932f-12451eef1876" name="Changes" comment="" />
+      <created>1727145619317</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727145619317</updated>
+      <workItem from="1727145621594" duration="235000" />
+      <workItem from="1727145910839" duration="2617000" />
+      <workItem from="1727238330565" duration="114000" />
+      <workItem from="1727396585872" duration="92000" />
+      <workItem from="1727396761284" duration="8000" />
+      <workItem from="1731981933759" duration="639000" />
+      <workItem from="1732237275546" duration="61000" />
+      <workItem from="1732588010052" duration="4504000" />
+      <workItem from="1742366479538" duration="364000" />
+      <workItem from="1742366869445" duration="3454000" />
+      <workItem from="1754006085170" duration="1148000" />
+      <workItem from="1754140797869" duration="9478000" />
+      <workItem from="1754351026606" duration="8733000" />
+      <workItem from="1754488373497" duration="757000" />
+      <workItem from="1754787406798" duration="18314000" />
+      <workItem from="1754914602626" duration="6611000" />
+      <workItem from="1755008979649" duration="7000" />
+      <workItem from="1756215200673" duration="7951000" />
+      <workItem from="1756300142468" duration="8541000" />
+      <workItem from="1756480363244" duration="9000" />
+      <workItem from="1756480446285" duration="20000" />
+      <workItem from="1756480482622" duration="69000" />
+      <workItem from="1756480555953" duration="26000" />
+      <workItem from="1756480602482" duration="1959000" />
+      <workItem from="1756483015519" duration="7082000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/c_java常用类用集合框架/DateTimeMain.java</url>
+          <line>135</line>
+          <properties class="com.c_java常用类用集合框架.DateTimeMain" method="test4">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
