@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d42384e9-2933-4aec-932f-12451eef1876" name="Changes" comment="" />
+    <list default="true" id="d42384e9-2933-4aec-932f-12451eef1876" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/udp/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/udp/ReceivingParty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/udp/ReceivingParty2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/udp/Sender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/多线程网络编程/MyServerSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/多线程网络编程/MySocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/多线程聊天室/ChatServerSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/多线程聊天室/ChatSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/多线程聊天室/ChatSocket2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/g_网络编程/文件上传和下载/FileUploadAndDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/g_网络编程/文件上传和下载/FileUploadAndDownload.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,80 +70,95 @@
     <option name="showVisibilityIcons" value="true" />
     <option name="sortKey" value="BY_TIME_DESCENDING" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.AioCopyTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AioFileUpperCase.executor&quot;: &quot;Run&quot;,
-    &quot;Application.AssigningOperator.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BioCopyTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.BitOperation.executor&quot;: &quot;Run&quot;,
-    &quot;Application.CharacterStreamExample.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ClientSocket.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ConditionalStatement.executor&quot;: &quot;Run&quot;,
-    &quot;Application.DateTimeMain.executor&quot;: &quot;Run&quot;,
-    &quot;Application.GenerateFiles.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloWorld.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LogicalOperator.executor&quot;: &quot;Run&quot;,
-    &quot;Application.LoopStatement.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main02.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.MyServerSocket.executor&quot;: &quot;Run&quot;,
-    &quot;Application.NioCopyTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.NioFileUpperCase.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Sender.executor&quot;: &quot;Run&quot;,
-    &quot;Application.TernaryOperator.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Test.executor&quot;: &quot;Run&quot;,
-    &quot;Application.com.g_网络编程.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DateTimeMain.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DateTimeMain.test1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DateTimeMain.test2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DateTimeMain.test3.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DateTimeMain.test4.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.DateTimeMain.test5.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test2.test1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test2.test2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test2.test3.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.Test2.test4.executor&quot;: &quot;Run&quot;,
-    &quot;JavaClassFindUsagesOptions.isSearchForTextOccurrences&quot;: &quot;false&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.CodeSpringBootApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "Application.AioCopyTest.executor": "Run",
+    "Application.AioFileUpperCase.executor": "Run",
+    "Application.AssigningOperator.executor": "Run",
+    "Application.BioCopyTest.executor": "Run",
+    "Application.BitOperation.executor": "Run",
+    "Application.CharacterStreamExample.executor": "Run",
+    "Application.ChatServerSocket.executor": "Run",
+    "Application.ChatSocket.executor": "Run",
+    "Application.ChatSocket2.executor": "Run",
+    "Application.ClientSocket.executor": "Run",
+    "Application.ConditionalStatement.executor": "Run",
+    "Application.DateTimeMain.executor": "Run",
+    "Application.GenerateFiles.executor": "Run",
+    "Application.HelloWorld.executor": "Run",
+    "Application.LogicalOperator.executor": "Run",
+    "Application.LoopStatement.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Main02.executor": "Run",
+    "Application.Main2.executor": "Run",
+    "Application.Main3.executor": "Run",
+    "Application.MyServerSocket.executor": "Run",
+    "Application.MySocket.executor": "Run",
+    "Application.NioCopyTest.executor": "Run",
+    "Application.NioFileUpperCase.executor": "Run",
+    "Application.ReceivingParty.executor": "Run",
+    "Application.ReceivingParty2.executor": "Run",
+    "Application.Sender.executor": "Run",
+    "Application.TernaryOperator.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.com.g_网络编程.Main.executor": "Run",
+    "JUnit.ChatSocket.client01.executor": "Run",
+    "JUnit.DateTimeMain.test.executor": "Run",
+    "JUnit.DateTimeMain.test1.executor": "Run",
+    "JUnit.DateTimeMain.test2.executor": "Run",
+    "JUnit.DateTimeMain.test3.executor": "Run",
+    "JUnit.DateTimeMain.test4.executor": "Run",
+    "JUnit.DateTimeMain.test5.executor": "Run",
+    "JUnit.MySocket.client1.executor": "Run",
+    "JUnit.MySocket.client2.executor": "Run",
+    "JUnit.MySocket.client3.executor": "Run",
+    "JUnit.Test2.test1.executor": "Run",
+    "JUnit.Test2.test2.executor": "Run",
+    "JUnit.Test2.test3.executor": "Run",
+    "JUnit.Test2.test4.executor": "Run",
+    "JavaClassFindUsagesOptions.isSearchForTextOccurrences": "false",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.CodeSpringBootApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.preview.features.used": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\StudyNotes\1.Java基础(JDK21)\code" />
       <recent name="D:\StudyNotes\1.Java基础(JDK21)\code\src\main\resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.g_网络编程.多线程聊天室" />
+      <recent name="com.g_网络编程.udp" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.CodeSpringBootApplication">
-    <configuration name="ClientSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.tcp.ClientSocket" />
+  <component name="RunManager" selected="Application.ChatSocket2">
+    <configuration name="ChatServerSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.多线程聊天室.ChatServerSocket" />
       <module name="code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.g_网络编程.tcp.*" />
+          <option name="PATTERN" value="com.g_网络编程.多线程聊天室.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,12 +166,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.Main2" />
+    <configuration name="ChatSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.多线程聊天室.ChatSocket" />
       <module name="code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.g_网络编程.*" />
+          <option name="PATTERN" value="com.g_网络编程.多线程聊天室.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,12 +179,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.Main3" />
+    <configuration name="ChatSocket2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.多线程聊天室.ChatSocket2" />
       <module name="code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.g_网络编程.*" />
+          <option name="PATTERN" value="com.g_网络编程.多线程聊天室.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,15 +192,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyServerSocket" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.tcp.MyServerSocket" />
+    <configuration name="ChatSocket.client01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.g_网络编程.tcp.*" />
+          <option name="PATTERN" value="com.g_网络编程.多线程聊天室.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.g_网络编程.多线程聊天室" />
+      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.多线程聊天室.ChatSocket" />
+      <option name="METHOD_NAME" value="client01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MySocket.client3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.g_网络编程.多线程网络编程.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.g_网络编程.多线程网络编程" />
+      <option name="MAIN_CLASS_NAME" value="com.g_网络编程.多线程网络编程.MySocket" />
+      <option name="METHOD_NAME" value="client3" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -187,26 +233,13 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
-    <configuration name="CodeSpringBootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="code" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.CodeSpringBootApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.CodeSpringBootApplication" />
-        <item itemvalue="Application.ClientSocket" />
-        <item itemvalue="Application.MyServerSocket" />
-        <item itemvalue="Application.Main3" />
-        <item itemvalue="Application.Main2" />
+        <item itemvalue="Application.ChatSocket2" />
+        <item itemvalue="Application.ChatSocket" />
+        <item itemvalue="Application.ChatServerSocket" />
+        <item itemvalue="JUnit.ChatSocket.client01" />
+        <item itemvalue="JUnit.MySocket.client3" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +284,9 @@
       <workItem from="1756480555953" duration="26000" />
       <workItem from="1756480602482" duration="1959000" />
       <workItem from="1756483015519" duration="7082000" />
-      <workItem from="1756562879820" duration="1240000" />
+      <workItem from="1756562879820" duration="7988000" />
+      <workItem from="1756735544801" duration="4044000" />
+      <workItem from="1756821070173" duration="8406000" />
     </task>
     <servers />
   </component>

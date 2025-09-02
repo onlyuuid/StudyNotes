@@ -65,7 +65,7 @@ public class FileUploadAndDownload {
                ServletOutputStream outputStream = response.getOutputStream()
             ){
            byte[] bytes = new byte[1024];
-           int len = 0;
+           int len;
            while ((len = fileInputStream.read(bytes)) != -1){
                outputStream.write(bytes,0,len);
            }
