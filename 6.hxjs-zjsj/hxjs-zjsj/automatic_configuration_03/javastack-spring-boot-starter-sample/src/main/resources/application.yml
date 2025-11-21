@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: javastack-spring-boot-starter-sample
+
+javastack:
+  starter:
+    enabled: true

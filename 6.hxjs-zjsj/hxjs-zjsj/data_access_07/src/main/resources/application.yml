@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: data_access_07
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 设置 druid 数据源类型
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/data_access?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: pbb
+    password: 123456
+# 启动时初始化数据库
+#  sql:
+#    init:
+#      mode: always
+#      continue-on-error: true
+#      schema-locations:
+#        - classpath:sql/hobby.sql
+#      data-locations:
+#        - classpath:sql/install_hobby_data.sql
+#  jdbc:
+#    template:
+#      max-rows: 3 # 最大返回行数
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+
+  data:
+    redis:
+      client-type: jedis
+      host: 127.0.0.1
+      port: 6379
+      database: 1
+      username:
+      password:
+
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.jinhuajia.data_access_07.mybatis.domain
+
+
+

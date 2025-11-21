@@ -1,0 +1,28 @@
+server:
+    port: 8003
+
+spring:
+  application:
+    name: springbootstarter_automatic_configuration_03
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+# 邮件配置
+  mail:
+    host: smtp.qq.com
+    username: 2625895245@qq.com
+    password: zxqqgrhzafyzdjjb
+    properties:
+      "[mail.smtp.socketFactory.class]": javax.net.ssl.SSLSocketFactory
+      "[mail.smtp.socketFactory.fallback]": false
+      "[mail.smtp.socketFactory.port]": 465
+      "[mail.smtp.connectiontimeout]": 5000
+      "[mail.smtp.timeout]": 3000
+      "[mail.smtp.writetimeout]": 5000
+
+mail:
+    from: 2625895245@qq.com
+    personal: pbb
+    subject: 测试邮件
+

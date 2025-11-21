@@ -1,0 +1,28 @@
+
+spring:
+  application:
+    name: log_management
+
+
+#logging:
+#  file:
+#    name: ./logs/javastack.log
+#logging:
+#  group:
+#    tomcat: org.apache.logging.log4j.catalina,org.apache.catalina
+#  level:
+#    tomcat: error
+
+#logging:
+#  file:
+#    name: ./logs/javastack.log
+#  logback:
+#    rollingpolicy:
+#      max-file-size: 1KB
+
+#logging:
+#  level:
+#    root: debug
+#    org.springframework.web: debug
+
+

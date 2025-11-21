@@ -1,0 +1,1 @@
+insert into hobby (id,name) values (1,'打游戏'),(2,'打台球');

@@ -1,0 +1,6 @@
+spring:
+  #  main:
+  #    log-startup-info: false
+
+  application:
+    name: start-up_procedure_04

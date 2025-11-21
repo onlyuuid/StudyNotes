@@ -1,0 +1,39 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: configuration_management_02
+
+number:
+  xxx: 123
+
+user:
+  name2: zhangsan
+  age: 18
+  sex: man
+  phone: 123456743
+  addr:
+    city: beijing
+  addr2:
+    city2: shanghai
+
+nickname:
+  name: lisi
+  age: 20
+
+jasypt:
+  encryptor:
+#    password: 123456  # 解密密码
+    property:
+      prefix: "ENC@[" # 前缀
+      suffix: "]"     # 后缀
+
+javastack:
+  name: lisi
+  username: ENC@[GChmMl5gqjrdSXtOQA3k1X77DUaitQ1DX6Y5ChR7fRV97E/5BckdzQIT6LH3obly]
+  password: ENC@[pkTQKjBl+zzlByp5BfH2E9gvrZjZ0iDMj0m7FQ0och06GgpSbTNtBKs4jvIxgRGA]
+
+
+
+
